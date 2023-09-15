@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Training Session Experience</title>
+    <style>
+        /* Basic CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .image {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px;
+            }
+        }
+
+        /* Flex container for images */
+        .image-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .image-item {
+            flex: 0 0 calc(33.33% - 10px);
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .image-item {
+                flex: 0 0 calc(50% - 10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>My Training Session Experience</h1>
+    </div>
+    <div class="container">
+        <h2>Overview</h2>
+        <p>Attending training sessions has been a valuable experience. I've gained knowledge, skills, and insights that have been instrumental in my personal and professional growth.</p>
+        <h2>Images</h2>
+        <div class="image-container">
+            <div class="image-item">
+                <img src="bg3.jpeg" alt="Image 1" class="image">
+            </div>
+            <div class="image-item">
+                <img src="bg4.jpeg" alt="Image 2" class="image">
+            </div>
+            
+        </div>
+        <h2>Key Takeaways</h2>
+        <ul>
+            <li>Enhanced skills in my field</li>
+            <li>Networking with industry professionals</li>
+            <li>Continuous learning and improvement</li>
+        </ul>
+        <h2>Feedback</h2>
+        <p>Overall, my training session experiences have been incredibly positive, and I look forward to continuing my learning journey.</p>
+        <button class="button" id="changeColorButton">Change Header Color</button>
+    </div>
+
+    <script>
+        
+        const header = document.querySelector('.header');
+        const changeColorButton = document.getElementById('changeColorButton');
+
+        changeColorButton.addEventListener('click', function() {
+            
+            const randomColor = '#' + (Math.random() * 0xFFFFFF << 0).toString(16);
+            header.style.backgroundColor = randomColor;
+        });
+    </script>
+</body>
+</html>
